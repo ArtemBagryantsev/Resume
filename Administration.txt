@@ -1,0 +1,2 @@
+superuser: djangoadmin
+password: 12345
