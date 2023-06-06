@@ -7,7 +7,7 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
-    <title>Did Coding - Home</title>
+    <title>{% block title %}{% endblock %}</title>
     <meta name="author" content="Did Coding Limited & James Granger Design">
     <link rel="canonical" href="{{request.path}}"/>
     <link rel="home" href="{% url 'main:home' %}"/>
@@ -38,15 +38,16 @@
 
 
     
-    {% include main/partials/footer.html %}
+    {% include 'main/partials/footer.html' %}
 
     <!-- ================================
     Start Scripts
     ================================= -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
-    <script src="js/bootstrap.bundle.min.js"></script>
+    <script src="{% static 'js/bootstrap.bundle.min.js' %}"></script>
     <script src="https://unpkg.com/swiper@7.0.5/swiper-bundle.min.js"></script>
-    <script src="js/script.js"></script>
+    <script src="{% static 'js/script.js' %}"></script>
+    {% block extend_footer %}{% endblock %}
     <!-- ================================
     End Scripts
     ================================= -->

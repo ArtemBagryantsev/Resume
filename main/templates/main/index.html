@@ -1,10 +1,10 @@
-{% extends main/base.html %}
+{% extends 'main/base.html' %}
 {% load static %}
 
 <!-- ================================
 Start SEO blocks
 ================================= -->
-{% block title %}{% endblock %}
+{% block title %}Did Coding - Home{% endblock %}
 {% block description %}{% endblock %}
 {% block keyword %}{% endblock %}
 <!-- ================================
@@ -27,6 +27,7 @@ Start Script blocks
 End Script blocks
 ================================= -->
 
+{% block content %}
 <!-- ================================
 Start Content
 ================================= -->
@@ -36,7 +37,7 @@ Start Content
       <div class="row g-4 g-md-3  align-items-center">
         <div class="col-md-auto order-md-last">
           <div class="bannerUserImg">
-            <img src="images/user-img.jpg" alt="...">
+            <img src="{% static 'images/user-img.jpg' %}" alt="...">
           </div>
         </div>
         <div class="col-md">
@@ -69,19 +70,19 @@ Start Content
             <h4 class="smTitle pb-3">Key Skills</h4>
             <div class="keySkillCard">
               <div class="ksIconCol">
-                <img src="images/key-skill-icon-1.svg" alt="...">
+                <img src="{% static 'images/key-skill-icon-1.svg' %}" alt="...">
               </div>
               <span class="ksText">Key Skill 1</span>
             </div>
             <div class="keySkillCard">
               <div class="ksIconCol">
-                <img src="images/key-skill-icon-2.svg" alt="...">
+                <img src="{% static 'images/key-skill-icon-2.svg' %}" alt="...">
               </div>
               <span class="ksText">Key Skill 2</span>
             </div>
             <div class="keySkillCard">
               <div class="ksIconCol">
-                <img src="images/key-skill-icon-3.svg" alt="...">
+                <img src="{% static 'images/key-skill-icon-3.svg' %}" alt="...">
               </div>
               <span class="ksText">Key Skill 3</span>
             </div>
@@ -227,7 +228,7 @@ Start Content
           <div class="row g-4 align-items-center">
             <div class="col-md-auto">
               <div class="portfolioImgCol">
-                <a href="javascript:void(0)"><img src="images/work-img.jpg" alt="..."></a>
+                <a href="javascript:void(0)"><img src="{% static 'images/work-img.jpg' %}" alt="..."></a>
               </div>
             </div>
             <div class="col-md">
@@ -245,7 +246,7 @@ Start Content
           <div class="row g-4 align-items-center">
             <div class="col-md-auto">
               <div class="portfolioImgCol">
-                <a href="javascript:void(0)"><img src="images/work-img.jpg" alt="..."></a>
+                <a href="javascript:void(0)"><img src="{% static 'images/work-img.jpg' %}" alt="..."></a>
               </div>
             </div>
             <div class="col-md">
@@ -264,7 +265,7 @@ Start Content
           <div class="row g-4 align-items-center">
             <div class="col-md-auto">
               <div class="portfolioImgCol">
-                <a href="javascript:void(0)"><img src="images/work-img.jpg" alt="..."></a>
+                <a href="javascript:void(0)"><img src="{% static 'images/work-img.jpg' %}" alt="..."></a>
               </div>
             </div>
             <div class="col-md">
@@ -290,7 +291,7 @@ Start Content
                   <div class="row align-items-center">
                     <div class="col-sm-auto">
                       <div class="tImgCol">
-                        <img src="images/user-thumb.jpg" alt="...">
+                        <img src="{% static 'images/user-thumb.jpg' %}" alt="...">
                       </div>
                     </div>
                     <div class="col-sm">
@@ -307,7 +308,7 @@ Start Content
                   <div class="row align-items-center">
                     <div class="col-sm-auto">
                       <div class="tImgCol">
-                        <img src="images/user-thumb.jpg" alt="...">
+                        <img src="{% static 'images/user-thumb.jpg' %}" alt="...">
                       </div>
                     </div>
                     <div class="col-sm">
@@ -370,3 +371,4 @@ Start Content
 <!-- ================================
 End Content
 ================================= -->
+{% endblock %}
